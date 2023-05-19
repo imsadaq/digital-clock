@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  font-family: "poppins", sans-serif;
+}
+:root {
+  --black: #060606;
+  --white: #fff8f8;
+  --container: #fef2f2;
+  --dark: #1a1717;
+  --light: var(--white);
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+}
+section.dark {
+  background: var(--dark);
+}
+.container {
+  width: 570px;
+  height: 240px;
+  background-color: var(--container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+section.dark .container {
+  background-color: #262424;
+}
+.container .icons i {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  padding: 7px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  margin: 10px 0px;
+  cursor: pointer;
+  font-size: 17px;
+}
+section.dark .container .icons i {
+  background: var(--light);
+}
+.container .icons i.fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+section.dark .container .icons i.fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+  color: var(--black);
+  background: var(--white);
+}
+.container .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #e0a4a4; */
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+.time .time-colon {
+  /* background-color: #060606; */
+  display: flex;
+  margin: 0px 10px;
+}
+.time .time-colon .time-text {
+  display: flex;
+  background-color: #eff1fe;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+}
+.colon {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 50px;
+  /* margin: 0px 2px; */
+}
+section.dark .time-colon .colon {
+  color: var(--white);
+}
+.time-colon .am_pm {
+  position: relative;
+  right: -10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+section.dark .time .time-colon .am_pm {
+  color: var(--white);
+}
+.time-colon .num {
+  font-size: 30px;
+}
+.time-colon .text {
+  font-weight: normal;
+  padding: 8px 0px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+section.dark .time .time-text {
+  background: var(--dark);
+  color: var(--white);
+}
